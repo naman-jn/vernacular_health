@@ -41,8 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.indigo[300],
-                      Colors.indigo[700],
-                      Colors.indigo[900]
+                      Colors.indigo[800],
                     ],
                   )),
                   child: Form(
@@ -50,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Column(children: [
                       SizedBox(height: 170),
                       Text(
-                        "Cancer care",
+                        "Cancer Care",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
@@ -115,8 +114,9 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         "You will recieve a 6 digit code to verify next",
                         style: TextStyle(
-                          letterSpacing: 1.2,
-                          fontSize: 14,
+                          letterSpacing: 1,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w300,
                           color: Colors.white,
                         ),
                       ),
@@ -156,7 +156,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            loading ? Center(child: CircularProgressIndicator()) : Container()
+            loading
+                ? Container(
+                    height: MediaQuery.of(context).size.height,
+                    child: Center(child: CircularProgressIndicator()))
+                : Container()
           ],
         ),
       ),

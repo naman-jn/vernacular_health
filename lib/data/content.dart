@@ -1,4 +1,49 @@
+String userLanguage = 'Hindi';
+
 class Content {
+  getHomeLanguage() {
+    switch (userLanguage) {
+      case "English":
+        return englishHome;
+      case "Hindi":
+        return hindiHome;
+      case "Tamil":
+        return tamilHome;
+    }
+  }
+
+  getContentLanguage() {
+    switch (userLanguage) {
+      case "English":
+        return english;
+      case "Hindi":
+        return hindi;
+      case "Tamil":
+        return tamil;
+    }
+  }
+
+  Map englishHome = {
+    'what': 'What is Cancer',
+    'type': 'Cancer A-Z',
+    'news': 'Newsroom',
+    'community': 'Community',
+  };
+
+  Map hindiHome = {
+    'what': 'कैंसर क्या है',
+    'type': 'कैंसर A-Z',
+    'news': 'न्यूज़रूम',
+    'community': 'समुदाय',
+  };
+
+  Map tamilHome = {
+    'what': 'புற்றுநோய் என்றால் என்ன',
+    'type': 'புற்றுநோய் A-Z',
+    'news': 'செய்தி அறை',
+    'community': 'சமூகங்கள்',
+  };
+
   Map english = {
     'heading': 'About Cancer',
     'what': {

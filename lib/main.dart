@@ -1,12 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vernacular_health/login/login_page.dart';
+import 'package:vernacular_health/login/otpVerification.dart';
 
 import 'home.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -14,10 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Vernacular Health',
-      debugShowCheckedModeBanner: false,
-      home: CheckUserStatus(),
-    );
+        title: 'Vernacular Health',
+        debugShowCheckedModeBanner: false,
+        home: CheckUserStatus());
   }
 }
 

@@ -27,8 +27,6 @@ class _OtpVerificationState extends State<OtpVerification> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   final formKey = GlobalKey<FormState>();
   bool loading;
-  // Color lightPurple = Color(0XFF5D57B0);
-  // Color indigo = Color(0XFF17118D);
   @override
   void initState() {
     super.initState();
@@ -55,8 +53,6 @@ class _OtpVerificationState extends State<OtpVerification> {
   double screenHeight, screenWidth;
   @override
   Widget build(BuildContext context) {
-    Color babyBlue = Color(0XFFA7CCFF);
-    Color yaleBlue = Color(0XFF304D6D);
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
 
@@ -78,11 +74,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                         gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.indigo[300],
-                        Colors.indigo[700],
-                        Colors.indigo[900]
-                      ],
+                      colors: [Colors.indigo[300], Colors.indigo[800]],
                     )),
                     child: Column(
                       children: [
@@ -231,9 +223,6 @@ class _OtpVerificationState extends State<OtpVerification> {
           });
         },
 
-        // onTap: () {
-        //   print("Pressed");
-        // },
         onChanged: (value) {
           print(value);
           setState(() {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "658413296260",
+    "project_id": "vernacular-health",
+    "storage_bucket": "vernacular-health.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658413296260:android:ae1883cf6cf271df1ec0d1",
+        "android_client_info": {
+          "package_name": "com.example.vernacular_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658413296260-qso0fjdmck22u5fovv4gc5ppoo79liph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbSQlzvXfY3UOrrLyzLYW2_0V91ykY6ME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658413296260-qso0fjdmck22u5fovv4gc5ppoo79liph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

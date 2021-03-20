@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vernacular_health/login/login_page.dart';
 
+import 'home.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
@@ -42,7 +44,7 @@ class _CheckUserStatusState extends State<CheckUserStatus> {
                 }
               case "home":
                 {
-                  // page = HomePage(uid: snapshot.data[0]);
+                  page = HomePage();
                   break;
                 }
             }

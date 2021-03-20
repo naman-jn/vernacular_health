@@ -78,16 +78,15 @@ class _OtpVerificationState extends State<OtpVerification> {
                         gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [babyBlue, yaleBlue],
+                      colors: [
+                        Colors.indigo[300],
+                        Colors.indigo[700],
+                        Colors.indigo[900]
+                      ],
                     )),
                     child: Column(
                       children: [
-                        SizedBox(height: 180),
-                        // Image.asset(
-                        //   "assets/images/otp.png",
-                        //   width: 260,
-                        // ),
-                        SizedBox(height: 40),
+                        SizedBox(height: 220),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Padding(

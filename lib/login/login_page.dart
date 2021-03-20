@@ -22,8 +22,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    Color babyBlue = Color(0XFFC8C8C8);
-    Color yaleBlue = Color(0XFF5E6483);
+    Color babyBlue = Color(0XFFA7CCFF);
+    Color yaleBlue = Color(0XFF304D6D);
     return Scaffold(
       body: SingleChildScrollView(
         child: Stack(
@@ -39,21 +39,26 @@ class _LoginPageState extends State<LoginPage> {
                       gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [babyBlue, yaleBlue],
+                    colors: [
+                      Colors.indigo[300],
+                      Colors.indigo[700],
+                      Colors.indigo[900]
+                    ],
                   )),
                   child: Form(
                     key: formKey,
                     child: Column(children: [
-                      SizedBox(height: 140),
+                      SizedBox(height: 170),
                       Text(
                         "Cancer care",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 30,
+                            fontSize: 48,
+                            fontWeight: FontWeight.w500,
                             letterSpacing: 1.5),
                       ),
-                      SizedBox(height: 120),
+                      SizedBox(height: 100),
                       Text(
                         "Login",
                         textAlign: TextAlign.center,
@@ -63,16 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white,
                             fontWeight: FontWeight.w500),
                       ),
-                      SizedBox(height: 10),
-                      Text(
-                        "You will recieve a 6 digit code to verify next",
-                        style: TextStyle(
-                          letterSpacing: 1.2,
-                          fontSize: 14,
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(height: 40),
+                      SizedBox(height: 20),
                       Container(
                           margin: EdgeInsets.symmetric(horizontal: 25),
                           child: TextFormField(
@@ -87,14 +83,14 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               errorBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                width: 2,
+                                width: 1,
                                 color: Colors.deepOrangeAccent,
                               )),
                               errorStyle:
                                   TextStyle(color: Colors.deepOrangeAccent),
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                width: 2,
+                                width: 1,
                                 color: Colors.white,
                               )),
                               focusedBorder: OutlineInputBorder(
@@ -115,6 +111,15 @@ class _LoginPageState extends State<LoginPage> {
                               }
                             },
                           )),
+                      SizedBox(height: 10),
+                      Text(
+                        "You will recieve a 6 digit code to verify next",
+                        style: TextStyle(
+                          letterSpacing: 1.2,
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
                       SizedBox(height: 30),
                       Builder(
                         builder: (context) => FlatButton(
@@ -134,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                                 print("Errorrrrrrrrrrrrrrrr!");
                             },
                             textColor: Color(0XFF338678),
-                            // color: Colors.blueGrey,
+                            color: Colors.indigo[400],
                             padding: EdgeInsets.symmetric(
                                 vertical: 15, horizontal: 25),
                             child: Text(

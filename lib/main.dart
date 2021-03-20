@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vernacular_health/login/login_page.dart';
+import 'package:vernacular_health/screens/about.dart';
+import 'package:vernacular_health/screens/newsScreen.dart';
 
 import 'home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.black, // navigation bar color
+    statusBarColor: Colors.indigo, // status bar color
+  ));
   runApp(MyApp());
 }
 

@@ -13,10 +13,12 @@ class NewsScreen extends StatefulWidget {
 class _NewsScreenState extends State<NewsScreen> {
   List articles;
   double screenHeight;
+  double screenWidth;
 
   @override
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
+    screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -26,29 +28,42 @@ class _NewsScreenState extends State<NewsScreen> {
                 if (snapshot.hasData) {
                   articles = snapshot.data['articles'];
                   return Container(
-                      padding: EdgeInsets.all(7),
                       height: screenHeight,
                       child: Column(
                         children: [
-                          Row(
-                            children: [
-                              IconButton(
-                                  icon: Icon(
-                                    Icons.arrow_back,
-                                    size: 30,
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  }),
-                              Text(
-                                'Latest Updates',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24,
-                                  letterSpacing: 1.2,
-                                ),
+                          Material(
+                            child: Container(
+                              width: screenWidth,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                color: Colors.indigo[700],
                               ),
-                            ],
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 18.0, left: 20.0),
+                                    child: InkWell(
+                                        onTap: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Icon(
+                                          Icons.arrow_back,
+                                          color: Colors.white,
+                                        )),
+                                  ),
+                                  Flexible(
+                                    child: Text(
+                                      'Latest Updates',
+                                      style: TextStyle(
+                                          fontSize: 21.0, color: Colors.white),
+                                      maxLines: 2,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: 10,

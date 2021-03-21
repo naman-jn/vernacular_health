@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:vernacular_health/home.dart';
 import 'package:vernacular_health/login/otpVerification.dart';
 
 class OTPService {
@@ -12,25 +13,8 @@ class OTPService {
         print("uid:::  " +
             authResult.user.uid +
             " logged in successfully (inside verification complete callback)");
-
-        bool isDocExists = true;
-        // await DatabaseService().isUserDocExists();
-        if (isDocExists) {
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => HomePage(),
-          //     ),
-          //     (route) => false);
-        } else {
-          //redirect to details page
-          // Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => InitialDetailsPage(),
-          //     ),
-          //     (route) => false);
-        }
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Homepage()));
 
         return;
       } else {

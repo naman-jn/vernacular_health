@@ -50,7 +50,7 @@ class _CheckUserStatusState extends State<CheckUserStatus> {
                 }
               case "home":
                 {
-                  page = HomePage();
+                  page = Homepage();
                   break;
                 }
             }
